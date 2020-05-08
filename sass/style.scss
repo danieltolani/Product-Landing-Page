@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800&display=swap');
+
+$main-bg: #100e19;
+$orange: #ff5328;
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,body{
+    position: relative;
+    margin: 20px;
+    background: $main-bg;
+
+    #header{
+        display: flex; 
+        justify-content: space-between !important;
+        place-items: center;
+
+        img#header-img{
+            width: 120px;
+            max-width: 100%;
+            height: auto;
+        }
+
+        nav#nav-bar{
+            ul{
+                display: flex;
+                li{
+                    list-style: none;
+                    margin-left: 50px;
+
+                    a[href]{
+                        font-size: 1.5rem;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .container{
+        text-align: center;
+        margin: auto auto;
+
+        h1#company-selling-intro{
+            font-size: 8rem;
+            margin: 20px 0px;
+            text-align: center;
+        }
+
+        form#form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #email{
+                overflow: hidden;
+                font-size: 1.2rem;
+                width: 25rem;
+                height: 2.5rem;
+                border: none;
+                padding: 0px 10px;
+                border-radius: 50px;
+                color: black;
+                font-weight: 300;
+            }
+
+            #submit{
+                background: $orange;
+                border: none;
+                margin: 10px 0px;
+                font-size: 1.8rem;
+                height: 2.5rem;
+                width: 8rem;
+                border-radius: 5px 2px 5px 2px;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.411);
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        img#main-shoe{
+            width: 60rem;
+            max-width: 100%;
+            height: auto;
+            margin: 50px 0px;
+        }
+
+        iframe#video{
+            box-shadow: 0px 2px 20px 2px black;
+            border-radius: 20px;
+            max-width: 100%;
+            
+        }
+        
+        .wrapper{
+            margin-left: auto;
+            margin-right: auto;
+            height: auto;
+            max-width: 720px;
+            height: auto;
+       
+        section#pricing{
+            display: grid;
+            margin: 60px auto;
+            grid-template-columns: repeat(3, 200px);
+            grid-gap: 40px;
+            max-width: 100%;
+            height: auto;
+
+            .grid{
+                position: relative;
+                width: 200px;
+                height: 250px;
+                background-color: $orange;
+                border-radius: 6px;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+                overflow: hidden;
+                margin: 0px 20px;
+
+                .grid-shoe{
+                    width: 16rem;
+                    max-width: 100%;
+                    height: auto;
+                    margin-top: 40px;
+                    z-index: 99999;
+                }
+
+                h3{
+                    font-size: 2.5rem;
+                    margin-top: 8px;
+                    white-space: nowrap;
+                    font-weight: 700;
+
+                    .naira-sign{
+                        font-size: 2.5rem;
+                        text-decoration: line-through;
+                        text-decoration-style: double;
+                        white-space: nowrap;
+                        font-weight: 600;
+                    }
+                }
+                .shoe-name{
+                    font-size: 2rem;
+                    white-space: nowrap;
+                    font-weight: 600;
+                }
+                .grid-select-button{
+                    white-space: nowrap;
+                    font-size: 1.6rem;
+                    width: 10rem;
+                    height: 3rem;
+                    border: none;
+                    background-color: $main-bg;
+                    border-radius: 5px 0px 5px 0px;
+                    margin-top: 10px;
+                    font-weight: 500;
+                }
+            }
+            .grid::before{
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background: white;
+                clip-path: circle(100px at 80% 10%);
+            }
+        }
+    }
+    h5{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    }   
+}
+
+@media screen and (max-width: 800px){
+
+    h1#company-selling-intro{
+        font-size: 6rem !important;
+    }
+    .wrapper{
+        margin: 0px auto !important;
+        width: 420px !important;
+        height: auto;
+
+        section#pricing{
+            margin: 60px auto;
+            grid-template-columns: repeat(2,200px) !important;
+        } 
+        h3{
+            font-size: 2.2rem !important;
+            .naira-sign{
+                font-size: 2.2rem !important;
+            }
+        }
+        .shoe-name{
+            font-size: 1.5rem !important;
+        }  
+    }
+}
+
+@media screen and (max-width: 600px){
+
+    a[href]{
+        font-size: 1.2rem !important;
+        font-weight: 600 !important;
+    }
+
+    h1#company-selling-intro{
+        font-size: 4rem !important;
+    }
+
+    #submit{
+        font-size: 1.4rem !important;
+    }
+
+    img#main-shoe{
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 500px){
+    iframe#video{
+        box-shadow: none !important;
+    }
+    #header{
+        flex-direction: column !important;
+    }
+    nav#nav-bar{
+        margin-top: 10px !important;
+    }
+    li{
+        margin-left: 20px !important;
+    }
+    h1#company-selling-intro{
+        font-size: 3.5rem !important;
+    }
+
+
+    .wrapper{
+        max-width: 100%;
+    }
+    section#pricing{
+        display: flex !important;
+        flex-direction: column;
+        place-items: center;
+    }
+    .grid{
+        margin-top: 20px !important;
+    }
+}
+
+@media screen and (max-width: 375px){
+    #header{
+        flex-direction: column !important;
+    }
+    h1#company-selling-intro{
+        font-size: 2.8rem !important;
+    }
+    nav#nav-bar{
+        margin-top: 10px !important;
+    }
+}
