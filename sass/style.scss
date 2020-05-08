@@ -12,6 +12,9 @@ $orange: #ff5328;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
 }
+*:focus{
+    outline: none;
+}
 
 html,body{
     position: relative;
@@ -181,7 +184,8 @@ html,body{
         font-size: 1.2rem;
         font-weight: 300;
     }
-    }   
+    }  
+    
 }
 
 @media screen and (max-width: 800px){
